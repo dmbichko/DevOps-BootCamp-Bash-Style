@@ -24,7 +24,9 @@ while [ "$ch" -ne 3 ]; do
         c=1
         break
       fi
-      if [[ "${r[("$x"-1)]}" -eq "$n" ]]; then
+      index=$((x - 1))
+      if [[ "${r[$index]}" -eq "$n" ]]; then
+      #if [[ "${r[("$x"-1)]}" -eq "$n" ]]; then
         echo "Great"
         ((p=p+1))
       else
